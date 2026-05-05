@@ -1,7 +1,0 @@
-cart_list = [
-    {"name": "apple", "price": 10},
-    {"name": "banana", "price": 5},
-    {"name": "cherry", "price": 50}
-]
-cart_list.sort(key=lambda x: x["price"], reverse=True)
-print(cart_list)
