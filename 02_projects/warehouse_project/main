@@ -1,1 +1,21 @@
-
+Warehouse_list=[
+    {"ID":1,"name":"iPhone","price":7999,"stock":5},
+    {"ID":2,"name":"Dog Food","price":250,"stock":10},
+    {"ID":3,"name":"Guitar","price":9000,"stock":6}
+]
+def query():
+    print("----------------Current inventory----------------")
+    for item_dict in Warehouse_list:
+        print(f"ID：{item_dict['ID']}|Name：{item_dict['name']}|Price:{item_dict['price']}|Stock:{item_dict['stock']}")
+def put_in_storage(new_item):
+    Warehouse_list.append(new_item)
+    print("------ Storage successfu------")
+    query()
+def cal_total_price():
+    total_value=0
+    for item_dict in Warehouse_list:
+        goods_value= item_dict["price"] * item_dict["stock"]
+        total_value += goods_value
+    print(f"Total value of all goods：{total_value}")
+put_in_storage({"ID":4,"name":"Chair","price":299,"stock":500})
+cal_total_price()
